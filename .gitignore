@@ -20,5 +20,4 @@ __pycache__/
 *.log
 
 # Ignore data files
-data/
 data/*.csv
