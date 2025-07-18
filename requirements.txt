@@ -1,0 +1,21 @@
+# Core
+pandas
+numpy
+scikit-learn
+imbalanced-learn
+
+# Models
+xgboost
+lightgbm
+
+# Explainability
+shap
+lime
+
+# Visualization
+matplotlib
+seaborn
+
+# Utils
+python-dotenv
+joblib
