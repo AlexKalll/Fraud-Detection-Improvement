@@ -37,7 +37,7 @@ def save_data(df, file_path, index=False, **kwargs):
         **kwargs: Additional keyword arguments to pass to pandas.to_csv().
     """
     try:
-        df.to_csv(file_path, index=index, **kwargs)
+        df.to_csv(file_path, index= False, **kwargs)
         print(f"Successfully saved data to '{file_path}'.")
     except Exception as e:
         print(f"Error saving data to '{file_path}': {e}")
