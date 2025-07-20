@@ -3,7 +3,7 @@
 import pandas as pd
 import numpy as np
 import os
-from src.utils import load_data # Import the utility function
+from utils import load_data # Import the utility function
 
 def preprocess_fraud_data(df):
     """
@@ -162,6 +162,12 @@ def merge_fraud_and_ip_data(fraud_df, ip_country_df):
     Returns:
         pandas.DataFrame: The merged DataFrame with a 'country' column.
     """
+    # first check if there is a country column already in the fraud_df
+    print(fraud_df.columns.tolist())
+    if 'country' in fraud_df.columns.tolist():
+        print("Country column already exists in Fraud Data.i.e it has already been merged in the EDA.")
+        return fraud_df
+    
     print("--- Merging Fraud Data with IP to Country Data ---")
 
     # Sort ip_country_df by lower_bound_ip_address for efficient merging
@@ -229,6 +235,6 @@ if __name__ == '__main__':
     print(creditcard_processed.head())
 
     # Save the preprocessed data
-    print("\n--- Saving Preprocessed Data ---")
-    fraud_merged.to_csv(os.path.join(data_dir, 'Fraud_Data_Cleaned.csv'), index=False)
-    creditcard_processed.to_csv(os.path.join(data_dir, 'creditcard_Cleaned.csv'), index=False)
+    # print("\n--- Saving Preprocessed Data ---")
+    # fraud_merged.to_csv(os.path.join(data_dir, 'Fraud_Data_Cleaned.csv'), index=False)
+    # creditcard_processed.to_csv(os.path.join(data_dir, 'creditcard_Cleaned.csv'), index=False)
