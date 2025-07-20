@@ -21,3 +21,4 @@ __pycache__/
 
 # Ignore data files
 data/*.csv
+data/processed/
