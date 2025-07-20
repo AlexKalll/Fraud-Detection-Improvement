@@ -25,6 +25,9 @@ Fraud-Detection-Improvement/
         ├── README.md
         ├── requirements.txt
         ├── .gitignore
+        ├── .git/
+        │   ├── workflows/
+        │       ├── ci.yml
         ├── data/
         │   ├── Fraud_Data.csv
         │   ├── creditcard.csv
